@@ -1,0 +1,267 @@
+$blue:#5a00e0;
+$secondBlue:#6500e8; 
+.buy {
+    padding: 10vh 0;
+    min-height: 100vh;
+    align-items: center;
+    background: #0a0f1a;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+
+
+    .cardDetails {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2rem;
+        height: 100%;
+        margin: 10rem 0;
+        gap: 2rem;
+
+
+        .btn {
+            color: $secondBlue;
+            padding: 1em 2em;
+            background-color: transparent;
+            border-radius: 6px;
+            border: .3px solid var(--color);
+            transition: .5s;
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 1;
+            font-weight: 300;
+            border: 2px solid$secondBlue;
+            font-size: 17px;
+            font-family: 'Roboto', 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            color: white;
+           }
+           
+           .btn::after, .btn::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: skew(90deg) translate(-50%, -50%);
+            position: absolute;
+            inset: 50%;
+            left: 25%;
+            z-index: -1;
+            transition: .8s ease-out;
+            background-color: $blue;
+           }
+           
+           .btn::before {
+            top: -50%;
+            left: -25%;
+            transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+           }
+           
+           .btn:hover::before {
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+           }
+           
+           .btn:hover::after {
+            transform: skew(45deg) translate(-50%, -50%);
+           }
+           
+    
+           
+
+        .buyTitle {
+            font-size: 3rem;
+            text-align: left;
+        }
+
+        .cardFront {
+            max-width: 600px;
+            width: 100%;
+            background: #151d30;
+            padding: 3rem 2rem;
+            border-radius: 6px 24px;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: auto auto;
+            grid-auto-flow: dense;
+            gap: 2rem;
+            max-height: 250px;
+            height: 100%;
+
+            .cardNumber {
+                grid-column: 1/4;
+            }
+            .cardOwner {
+                grid-column: 1/3;
+            }
+            
+            
+
+            input {
+                width: 100%;
+                font-family: sans-serif;
+                background: transparent;
+                font-size: 1.2rem;
+                border: none;
+                color: white;
+                outline: none;
+                padding:.5rem 0;
+                border-bottom: 2px solid $secondBlue;
+                
+            
+            }
+
+        }
+        .cardBack {
+            max-width: 600px;
+            width: 100%;
+            max-height: 250px;
+            height: 100%;
+            background: #151d30;
+            padding: 3rem 2rem;
+            border-radius: 24px 6px;
+            display: grid;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+
+            input {
+                width: 100%;
+                font-family: sans-serif;
+                background: transparent;
+                font-size: 1.2rem;
+                border: none;
+                color: white;
+                outline: none;
+                padding:.5rem 0;
+                border-bottom: 2px solid $secondBlue;
+                
+            }
+
+            .cardBackLine {
+                width: 100%;
+                background: $secondBlue;
+                position: absolute;
+                height: 40px;
+                top: 10%;
+            }
+
+        }
+
+    }
+
+    .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+
+        .duration {
+            background: $secondBlue;
+            padding: 1rem;
+        }
+
+        .priceCard {
+            max-width: 500px;
+            width: 100%;
+            padding-bottom: 2rem;
+            background: #162135;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 24px 1px 40px $secondBlue,
+            1px 10px 50px #00f2ea,
+            6px 2px 20px #0e76a8;
+            border-radius: 6px;
+            overflow: hidden;
+
+            
+            .content {
+                margin: 2rem 0;
+
+                #price {
+                    font-size: 2.5rem;
+                }
+                #sale {
+                    text-decoration: line-through;
+                    font-size: 1.75rem;
+                    color: gray;
+                    margin-bottom: 2rem;
+                }
+
+               
+
+                #priceBtn {
+                    background: linear-gradient(-45deg, #3f00b5, #9f69fe, $secondBlue, $blue);
+                    background-size: 800% 400%;
+                    padding: 1em 2em;
+                    display: inline-block;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 17px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: white;
+                    transition: all .5s ease-in-out;
+                    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+                   }
+                   
+                   #priceBtn:hover {
+                    animation: gradient 3s infinite;
+                    transform: scale(1.05);
+                   }
+                   
+                   #priceBtn:active {
+                    animation: gradient 3s infinite;
+                    transform: scale(0.8);
+                   }
+                   
+                   @keyframes gradient {
+                    0% {
+                     background-position: 0% 50%;
+                    }
+                   
+                    50% {
+                     background-position: 100% 50%;
+                    }
+                   
+                    100% {
+                     background-position: 0% 50%;
+                    }
+                   }
+            }
+
+
+        }
+    }
+
+}
+
+@media (max-width:1200px) {
+    .buy {
+        grid-template-columns: auto;
+    
+        .cart {
+            grid-row: 1;
+        }
+    }
+}
+
+@media (max-width:460px) {
+    .buy {
+        .cardDetails {
+            .cardFront {
+                .cardExp {
+                    grid-column: 1/4;
+                }
+                .cardOwner {
+                    grid-column: 1/4;
+                }
+            }
+        }
+    }
+}

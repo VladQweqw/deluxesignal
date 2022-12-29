@@ -1,0 +1,142 @@
+.login {
+  padding-top: 10vh;
+  height: 120vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #0a0f1a;
+}
+.login .white {
+  background: #6500e8;
+  display: grid;
+  place-content: center;
+}
+.login .white .imgWrapper {
+  margin: 1rem;
+}
+.login .second {
+  display: grid;
+  place-items: center;
+}
+.login .register, .login .login- {
+  background: #0a0f1a;
+  padding: 2rem;
+  border-radius: 6px;
+  margin: 0 1rem;
+  border: 2px solid #5a00e0;
+  max-width: 600px;
+  width: 100%;
+}
+.login .register .altOpt, .login .login- .altOpt {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.login .register .altOpt p, .login .login- .altOpt p {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+.login .register .altOpt .line, .login .login- .altOpt .line {
+  width: 50%;
+  height: 2px;
+  background: #5a00e0;
+}
+.login .register .registerLogInBtn, .login .login- .registerLogInBtn {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  border: 2px solid #5a00e0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: 400ms ease;
+}
+.login .register .registerLogInBtn:hover, .login .login- .registerLogInBtn:hover {
+  background: #5a00e0;
+}
+.login .register .helpers, .login .login- .helpers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .register .helpers p, .login .login- .helpers p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  transition: 200ms ease;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+.login .register .helpers p:hover, .login .login- .helpers p:hover {
+  color: #5a00e0;
+}
+.login .register #registerTitle, .login .login- #registerTitle {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+.login .register form, .login .login- form {
+  width: 100%;
+  margin-top: 1rem;
+}
+.login .register form label, .login .login- form label {
+  font-size: 1.5rem;
+}
+.login .register form .input, .login .login- form .input {
+  width: 100%;
+  position: relative;
+  padding: 0.5rem 0;
+}
+.login .register form .input input, .login .login- form .input input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  position: relative;
+  border: none;
+  margin: 1rem 0;
+  color: white;
+  font-size: 1.5rem;
+  border-bottom-width: 2px;
+  border-bottom-color: #5a00e0;
+  transition: 400ms ease;
+  border-bottom-style: solid;
+}
+.login .register form .btn, .login .login- form .btn {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.login .register form .btn button, .login .login- form .btn button {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  background: #6500e8;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: 400ms ease;
+}
+.login .register form .btn button:hover, .login .login- form .btn button:hover {
+  transform: translateY(2px);
+  background: #4708a7;
+}
+
+@media (max-width: 1300px) {
+  .login {
+    grid-template-columns: auto;
+    padding: 0 1rem;
+  }
+  .login .white {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .login .register, .login .login- {
+    padding: 2rem 1rem;
+  }
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,188 @@
+
+$blue:#5a00e0;
+$secondBlue:#6500e8;
+.login {
+    padding-top: 10vh;
+    height: 120vh;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background: #0a0f1a;
+    
+
+    .white {
+        background: $secondBlue; // rgb(243, 242, 250);
+        display: grid;
+        place-content: center;
+        
+        .imgWrapper {
+            margin: 1rem;
+        }
+
+    }
+
+  
+
+    .second {
+       display: grid;
+       place-items: center;
+    }
+
+    .register,.login- {
+        background: #0a0f1a;
+        padding: 2rem ;
+        border-radius: 6px;
+        margin: 0 1rem;    
+        border: 2px solid $blue;
+        max-width: 600px;
+        width: 100%;
+       
+    
+       .altOpt {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+            margin: 1rem 0;
+
+            p {
+                padding: 0 1rem;
+                font-size: 1.5rem;
+            }
+
+            .line {
+                width: 50%;
+                height: 2px;
+                background: $blue;
+                
+            }
+
+        }
+
+        .registerLogInBtn {
+            width: 100%;
+            outline: none;
+            border: none;
+            font-size: 1.25rem;
+            border: 2px solid $blue;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            transition: 400ms ease;       
+            
+        }
+        .registerLogInBtn:hover {
+            background: $blue;
+        }
+        .helpers {
+       
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-size: clamp(1rem, 3vw,1.2rem);
+                transition: 200ms ease;
+                cursor: pointer;
+                margin: 0 .5rem;
+            }
+            p:hover {
+                color: $blue;
+            }
+        }
+
+      
+
+        #registerTitle {
+            color:white;
+            text-align: center;
+            font-size: 2rem;
+        }
+        form {
+            width: 100%;
+            margin-top: 1rem;
+
+            label {
+                font-size: 1.5rem;
+            }
+
+            .input {
+                width: 100%;
+                position: relative;
+                padding: .5rem 0;
+                input {
+                    width: 100%;
+                    background: transparent;
+                    outline: none;
+                    position: relative;                    
+                    border: none;
+                    margin: 1rem 0;
+                    color: white;
+                    font-size: 1.5rem;
+                    border-bottom-width: 2px;
+                    border-bottom-color: $blue;
+                    transition: 400ms ease;
+                    border-bottom-style: solid;
+                }
+
+           
+               
+            }
+           
+          
+
+            .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+                button {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    font-size: 1.25rem;
+                    background: $secondBlue;
+                    color: white;
+                    cursor: pointer;
+                    padding: 1rem;
+                    border-radius: 6px;
+                    transition: 400ms ease;
+                }
+                button:hover {
+                    transform: translateY(2px);
+                    background: #4708a7;
+                }
+            }
+           
+         
+
+           
+        }
+
+    }
+  
+ 
+}
+
+ @media( max-width:1300px) {
+        .login {
+            grid-template-columns: auto;
+            padding: 0 1rem;
+
+            .white {
+                display: none;
+            }
+
+           
+        }
+        
+
+   }
+@media (max-width:400px) {
+   .login {
+    .register,.login- {
+        padding: 2rem 1rem;
+    }
+   }
+}

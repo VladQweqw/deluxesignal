@@ -1,0 +1,45 @@
+.error {
+  height: 100vh;
+  background: #0a0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10vh 1rem 0 1rem;
+}
+.error #errorTitle {
+  font-size: clamp(2rem, 10vw, 5rem);
+}
+.error .error- {
+  font-size: clamp(7rem, 35vw, 15rem);
+  text-shadow: 1px 1px #5a00e0, 2px 2px #5a00e0, 3px 3px #5a00e0, 4px 4px #5a00e0, 5px 5px #5a00e0, 6px 6px #5a00e0, 7px 7px #5a00e0, 8px 8px #5a00e0, 9px 9px #5a00e0, 10px 10px #5a00e0, 11px 11px #5a00e0, 12px 12px #5a00e0, 13px 13px #5a00e0;
+}
+.error .errorBtn {
+  border: 2px solid #5a00e0;
+  padding: 1rem 5rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+  transition: 400ms ease;
+}
+.error .errorBtn::before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  bottom: 0;
+  background: #5a00e0;
+  left: 0;
+  transition: 400ms ease;
+}
+.error .errorBtn:hover::before {
+  height: 100%;
+}
+.error .errorBtn:hover {
+  box-shadow: 2px 3px 25px #5a00e0;
+}/*# sourceMappingURL=error.css.map */

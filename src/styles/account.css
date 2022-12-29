@@ -1,0 +1,192 @@
+.account {
+  height: 100vh;
+  background: rgb(10, 15, 26);
+  background-image: url("../images/accountBg.svg");
+  background-size: cover;
+  padding: 15vh 2rem 0 1rem;
+  position: relative;
+}
+.account .actionsModal {
+  position: fixed;
+  top: 110%;
+  left: 45%;
+  transform: translate(-50, 50%);
+  padding: 1rem;
+  background-color: #5a00e0;
+  color: white;
+  border-radius: 8px;
+  transition: 600ms ease;
+}
+.account .modalActive {
+  top: 90%;
+}
+.account .noProfile {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  height: 60vh;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  gap: 4rem;
+  color: white;
+}
+.account .noProfile .errorBtn {
+  border: 2px solid #5a00e0;
+  padding: 1rem 5rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  transition: 400ms ease;
+}
+.account .noProfile .errorBtn::before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  bottom: 0;
+  background: #5a00e0;
+  left: 0;
+  transition: 400ms ease;
+}
+.account .noProfile .errorBtn:hover::before {
+  height: 100%;
+}
+.account .noProfile .errorBtn:hover {
+  box-shadow: 2px 3px 25px #5a00e0;
+  color: white;
+}
+.account .wrapper {
+  max-width: 1200px;
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  justify-content: space-around;
+  text-align: center;
+  gap: 3rem;
+  position: relative;
+}
+.account .wrapper .forgotDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.account .wrapper .forgotDetails h3 {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+.account .wrapper .forgotDetails h3:hover {
+  color: #6500e8;
+}
+.account .wrapper .userDetails .logOut {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 400ms ease;
+}
+.account .wrapper .userDetails .logOut:hover {
+  color: red;
+}
+.account .wrapper .userDetails [type=file] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.account .wrapper .userDetails [type=file] + img {
+  background: transparent;
+  z-index: 99;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+.account .wrapper .userDetails #userImg {
+  border-radius: 50%;
+  cursor: pointer;
+  max-width: 200px;
+  transition: 200ms ease;
+}
+.account .wrapper .userDetails #userImg:hover {
+  opacity: 0.7 !important;
+}
+.account .wrapper .userDetails #userName {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.account .wrapper .userDetails #changeName, .account .wrapper .userDetails #pwdChange, .account .wrapper .userDetails #email {
+  outline: none;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  background: transparent;
+  border: 2px solid #6500e8;
+  border-radius: 8px;
+  color: white;
+}
+.account .wrapper .userDetails #changeNameBtn, .account .wrapper .userDetails #changePwdBtn {
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  background: #6500e8;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  width: 100%;
+}
+.account .wrapper .userDetails ::-moz-placeholder {
+  text-align: center;
+}
+.account .wrapper .userDetails :-ms-input-placeholder {
+  text-align: center;
+}
+.account .wrapper .userDetails ::placeholder {
+  text-align: center;
+}
+.account .wrapper .userDetails #changePwd, .account .wrapper .userDetails #changeUid {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: rgb(170, 164, 164);
+  transition: 200ms linear;
+}
+.account .wrapper .userDetails #changePwd:hover, .account .wrapper .userDetails #changeUid:hover {
+  color: #6500e8;
+}
+.account .wrapper .subscription #subscriptionType {
+  font-size: 2rem;
+}
+.account .wrapper .subscription #subcriptionDaysLeft {
+  color: #6500e8;
+  font-size: clamp(2.3rem, 9vw, 3rem);
+}/*# sourceMappingURL=account.css.map */
